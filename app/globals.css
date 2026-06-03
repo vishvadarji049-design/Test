@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+  background: #1a3c6e;
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Focus ring visible for keyboard nav */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+a,
+button {
+  transition: all 0.18s ease;
+}
